@@ -19,6 +19,14 @@ jobs:
     steps:
       - name: Hello world Windows!
         run: echo 'Hello world'
+        
+  print_hello_world_macos:
+    name: Hello world MacOS!
+    runs-on: macos-latest      
+    
+    steps:
+      - name: Hello world MacOS!
+        run: echo 'Hello world MacOS!'  
   
   print_hello_world_ubuntu_2:
     name: Hello world Ubuntu 2!
@@ -26,16 +34,9 @@ jobs:
     
     steps:
       - name: Hello world Ubuntu 2!
-        run: echo 'Hello world   
-   
-  print_hello_world_macos:
-    name: Hello world MacOS!
-    runs-on: macos-latest
+        run: 'date'   
     needs:
       - print_hello_world_ubuntu
       - print_hello_world_windows
-      - print_hello_world_ubuntu_2
+      - print_hello_world_macos
     
-    steps:
-      - name: Hello world MacOS!
-        run: echo 'Hello world MacOS!'
