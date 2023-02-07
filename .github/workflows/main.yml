@@ -10,15 +10,15 @@ jobs:
     
     steps:
       - name: Print date Ubuntu!
-        run: 'date'
-        
+        run: date
+      
   print_date_windows:
     name: Print date Windows!
     runs-on: windows-latest
     
     steps:
       - name: Print date Windows!
-        run: 'date'
+        run: date
         
   print_date_macos:
     name: Print date MacOS!
@@ -26,17 +26,17 @@ jobs:
     
     steps:
       - name: Print date MacOS!
-        run: 'date'  
+        run: date  
   
   print_date_ubuntu_2:
     name: Print date Ubuntu 2!
     runs-on: ubuntu-latest
     
-    steps:
-      - name: Print date Ubuntu 2!
-        run: 'date'   
     needs:
       - print_date_ubuntu
       - print_date_windows
       - print_date_macos
     
+    steps:
+      - name: Print date Ubuntu 2!
+        run: date   
